@@ -9,17 +9,11 @@ export default defineConfig({
   },
   base: '/',
   build: {
-    // Ensure proper module format
-    target: 'esnext',
-    minify: 'esbuild',
-    // Generate manifest for better caching
-    manifest: true,
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
-        // Ensure JS files have proper extensions
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
+        manualChunks: undefined,
       }
     }
   }
