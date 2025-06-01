@@ -14,14 +14,10 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center">
-            <p className="text-gray-400 text-sm flex items-center">
-              Made with <Heart size={14} className="text-teal-400 mx-1" /> using React & TailwindCSS
-            </p>
           </div>
         </div>
       </div>
     </footer>
   );
 };
-
 export default Footer;
